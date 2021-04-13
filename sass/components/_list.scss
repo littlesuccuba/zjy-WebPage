@@ -1,0 +1,29 @@
+.list {
+    .title {
+        border-bottom: 1px solid #471b70;
+        padding-bottom: 0;
+
+        a {
+            padding-top: 3px;
+            float: right;
+            font-size: 14px;
+            color: #4a1c74;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 2.2rem;
+            line-height: 1.2em;
+            display: inline-block;
+            padding-bottom: 1em;
+            border-bottom: 2px solid #471b70;
+        }
+    }
+
+    li {
+        padding: 1em 0;
+        font-size: 14px;
+        line-height: 1.5em;
+        border-bottom: 1px solid #ccc;
+    }
+}
