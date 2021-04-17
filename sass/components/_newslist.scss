@@ -1,0 +1,261 @@
+// 颜色
+$color-primary: #64167f;
+$color-primary-light: #6d1a86;
+$color-primary-dark: #542b70;
+$color-primary-dark-1:#540c72;
+$color-primary-line: #884f9c;
+$color-primary-grey: #533175;
+
+$color-primary-grey-1: #7a3ab3;
+
+$color-secondary-light: #f4930a;
+$color-secondary-dark: #ff7800;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-grey-dark-4: #ccc;
+$color-grey-dark-9: #999;
+$color-grey-dark-eaecec: #eaecec;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-background: #f5f7f6;
+$color-background-1: #f1eee7;
+$color-background-2: #f4f6f6;
+
+$text-color: #afa2bb;
+
+
+// 字体
+$default-font-size: 1.6rem;
+$larger-font-size: 2.6em;
+$small-font-size: 1.8em;
+
+
+// 网格
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+
+// 100%宽度
+$full-width: 100%;
+
+
+// 列表高度
+$list-height-lg: 10em;
+$list-height-default: 4em;
+$list-height-small: 2.6em;
+
+// 按钮宽度
+$btn-width-default: 4em;
+$btn-width-larger: 6em;
+$btn-width-small: 2em;
+
+// 按钮高度
+$btn-height-default: 4em;
+$btn-height-larger: 6em;
+$btn-height-small: 2em;
+
+// @import "../abstracts/variables";
+body{
+    background: $color-background;
+}
+.main{
+    background: url(https://dummyimage.com/1920x838/F3F4F7/8693ac) center top no-repeat;
+
+    // 用于居中的盒子
+    &__box{
+        width: $grid-width*0.86;
+        margin: 10px auto {
+            bottom: 0;
+        }
+        padding: 1em;
+    }
+    // 新闻列表
+    &__news{
+        display: block;
+        float: left;
+        width: $grid-width*0.6;
+        padding: 1em {
+            top: 0;
+            bottom: 0;
+        };
+        
+    }
+    // 新闻列表的标题
+    &__title{
+        font-size: $larger-font-size;
+        line-height: $larger-font-size;
+        font-weight: bold;
+        color: $color-primary;
+        border-bottom: 2px $color-primary solid;
+        padding-left: 0.5em;
+    }
+    // 新闻列表
+    &__list{
+        width: $full-width;
+    }
+    // 新闻列表元素
+    &__links{
+        width: $full-width;
+        display: block;
+        height: $list-height-lg;
+        padding: 2em;
+        border-bottom: $color-primary-line 1px solid;
+        img{
+            width: $gutter-vertical;
+            height: $gutter-vertical-small;
+            float: left;
+        }
+        div{
+            margin-left: $gutter-vertical;
+            padding: 1em {
+                top: 0;
+                bottom: 0;
+            };
+            h4{
+                font-size: $default-font-size;
+                font-weight: bold;
+                margin-bottom: 1em;
+            }
+            p{
+                text-indent: 2em;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+            }
+        }
+    }
+    // 分页器
+    &__pager{
+        width: $full-width;
+        margin: 1em {
+            top: 2em;
+            left: 0;
+            right: 0;
+        };
+        // background-color: $color-primary;
+    }
+    // 上一页按钮
+    &__pager-btn-back{
+        width: $btn-width-default;
+        height: $btn-height-default;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 0.7em;
+        outline: none;
+        &:focus{
+            outline: none;
+        }
+        float: left;
+        margin-left: 13em;
+    }
+    // 上一页图标
+    &__pager-icon-back{
+        display: block;
+        padding: 0.5em;
+        background-size: 50%;
+        width: $btn-width-default;
+        height: $btn-height-default;
+        &:hover{
+            cursor: pointer;
+        }
+        color: $color-white;
+    }
+    // 分页列表
+    &__pager-list{
+        display: block;
+        float: left;
+        width: $btn-width-default*7;
+        height: $btn-height-default;
+    }
+    // 列表元素
+    &__pager-items{
+        margin-left: 0.9em;
+        width: $btn-width-default;
+        background-color: $color-primary;
+        float: left;
+        color: $color-white;
+        text-align: center;
+        height: $btn-height-default;
+        line-height: $btn-height-default;
+        border-radius: 0.7em;
+        font-size: $small-font-size - 0.7;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    // 下一页按钮
+    &__pager-btn-next{
+        width: $btn-width-default;
+        height: $btn-height-default;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 0.7em;
+        outline: none;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        float: left;
+    }
+    // 下一页图标
+    &__pager-icon-next{
+        width: $full-width;
+        height: $full-width;
+        background: url(/img/double-left.png) center no-repeat;
+    }
+    // 快捷导航
+    &__nav{
+        width: $grid-width*0.2;
+        display: block;
+        float: left;
+        padding: 1em {
+            top: 2em;
+            bottom: 0;
+        };
+    }
+    // 导航标题
+    &__nav-title{
+        font-size: $small-font-size;
+        line-height: $larger-font-size;
+        font-weight: bold;
+        color: $color-grey-light-1;
+        padding-left: 0.5em;
+        text-align: center;
+        background-color: $color-primary-light;
+    }
+    // 导航列表
+    &__nav-list{
+        width: $full-width;
+    }
+    // 导航列表元素
+    &__nav-links{
+        width: $full-width;
+        height: $list-height-small;
+        line-height: $list-height-small;
+        text-align: center;
+        color: $color-primary;
+        border: 1px solid $color-primary {
+            top: 0;
+        };
+        font-size: $default-font-size;
+    }
+    // 清除浮动（防止父容器高度塌陷）
+    &__clear{
+        clear: both;
+    }
+}
